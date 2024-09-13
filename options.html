@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tab Limiter Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label,
+        button {
+            font-size: 16px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input,
+        textarea {
+            margin-top: 5px;
+            width: 300px;
+        }
+
+        #status {
+            margin-top: 10px;
+            color: green;
+        }
+
+        textarea {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tab Limiter Options</h1>
+    <div>
+        <label for="maxTabs">Maximum number of tabs:</label>
+        <input type="number" id="maxTabs" min="1" value="10">
+    </div>
+    <div>
+        <label for="excludedUrls">Excluded Domains or URLs (one per line):</label>
+        <textarea id="excludedUrls" placeholder="e.g.\nexample.com\nhttps://www.google.com/"></textarea>
+    </div>
+    <button id="saveButton">Save</button>
+    <p id="status"></p>
+    <script src="options.js"></script>
+</body>
+
+</html>
