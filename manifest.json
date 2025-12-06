@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Tab Limiter",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Closes the oldest open tabs if the total number exceeds a user-specified limit.",
     "permissions": [
         "tabs",
