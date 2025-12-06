@@ -7,7 +7,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 10px;
-            width: 300px;
+            width: 320px;
         }
 
         label,
@@ -34,6 +34,37 @@
         button {
             margin-top: 10px;
         }
+
+        #domainLimitsInfo {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+            font-size: 13px;
+        }
+
+        #domainLimitsInfo h3 {
+            margin: 0 0 8px 0;
+            font-size: 14px;
+        }
+
+        .domain-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0;
+        }
+
+        .domain-name {
+            color: #333;
+        }
+
+        .domain-count {
+            color: #666;
+        }
+
+        .no-limits {
+            color: #999;
+            font-style: italic;
+        }
     </style>
 </head>
 
@@ -41,9 +72,13 @@
     <h1>Tab Limiter</h1>
     <div id="tabCount">Loading tab count...</div>
     <div>
-        <label for="maxTabs">Maximum tabs:</label>
-        <input type="number" id="maxTabs" min="1" value="10">
+        <label for="maxTabs">Global max tabs:</label>
+        <input type="number" id="maxTabs" min="1" value="40">
         <button id="saveButton">Save</button>
+    </div>
+    <div id="domainLimitsInfo">
+        <h3>Per-Domain Limits:</h3>
+        <div id="domainLimitsList"></div>
     </div>
     <button id="optionsButton">More Options</button>
     <p id="status"></p>
